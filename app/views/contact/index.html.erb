@@ -1,0 +1,147 @@
+<div class="col-lg-12">
+<div class="navbar navbar-default">
+         <div class="navbar-header">
+			 <a class="navbar-brand" href="#"></a>
+        </div>
+        <ul class="nav navbar-nav">
+  	<li role="presentation"><%= link_to 'HOME', home_path %></li>
+  	<li role="presentation"><%= link_to 'ABOUT', about_path %></li>
+  	<li role="presentation"><%= link_to 'BLOG', blog_path %></li>
+	<li role="presentation" class="active"><%= link_to 'CONTACT', contact_path %></li>
+	<li class="divider-vertical"></li>
+	</ul>
+	<form class="navbar-form navbar-right" role="search">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="I'm looking for...">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form> 
+	<ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Follow me! <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+			<%= link_to "http://www.facebook.com/marta.szatanke" do %>
+			  <%= image_tag "social-icons/1496597149_facebook.svg" %>
+			<% end %>
+
+			<%= link_to "http://www.twitter.com/MartaStanke" do %>
+			  <%= image_tag "social-icons/1496597158_twitter.svg" %>
+			<% end %>
+
+			<%= link_to "http://pl.pinterest.com/martastanke" do %>
+			  <%= image_tag "social-icons/1496597162_pinterest.svg" %>
+			<% end %>
+			  
+			<%= link_to "http://www.linkedin.com/in/martastanke/" do %>
+			  <%= image_tag "social-icons/1496597198_linkedin.svg" %>
+			<% end %>
+			  
+			<%= link_to "http://www.github.com/marstanke" do %>
+			  <%= image_tag "social-icons/1496596551_github.svg" %>
+			<% end %>
+          </ul>
+		</ul>
+	</div>
+	
+	<div class="col-md-12">
+        	</div>
+    <hr>
+
+<div class="col-lg-12">
+	<div class="container">	
+      <div class="row">
+        <div class="col-lg-8">
+			<div class="category recent-posts">
+			<h1>Email me!</h1>
+
+                <hr>
+
+			<form id="contact-form" method="post" action="contact.php" role="form">
+			<div class="messages"></div>
+			<div class="controls">
+
+    		<div class="row">
+    		<div class="col-md-8">
+        	<div class="form-group">
+            	<label for="form_name">Name *</label>
+                <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+             <div class="help-block with-errors"></div>
+             </div>
+			</div>
+      </div>
+      <div class="row">
+            <div class="col-md-8">
+                <div class="form-group">
+                    <label for="form_email">Email *</label>
+                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+       </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_message">Message *</label>
+                    <textarea id="form_message" name="message" class="form-control" placeholder="Leave a message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+		<div class="row">
+		<div class="col-md-12">
+		<label for="human" class="col-sm-4 control-label">I am not a robot</label>
+		<div class="col-sm-8">
+			<input type="text" class="form-control" id="human" name="human" placeholder="2 + 3 = ?">
+		</div>
+	</div>
+			</div>
+			<div class="row">
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-success btn-send btn-sm" value="Send message">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-muted"><strong>*</strong> These fields are required.</p>
+            </div>
+        </div>
+    </div>
+		</div>
+
+</form>
+		  </div>
+		  </div>
+        <div class="col-lg-4">
+        
+        <div class="twitter">
+        <a class="twitter-timeline" data-lang="en" data-width="300" data-height="300" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/MartaStanke">Tweets by MartaStanke</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+		<div class="fb-page" data-href="https://www.facebook.com/shesaysSG/" data-tabs="timeline" data-width="300" data-height="300" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/shesaysSG/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/shesaysSG/">SheSays Singapore</a></blockquote></div>
+		  </div>
+		  
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<div class="panel panel-default">
+  <div class="panel-body">
+  </div>
+<div class="panel-footer">
+	  
+	  <p>© <%= Date.today.year %> Marta Stanke</p>
+</div>
+</div>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>

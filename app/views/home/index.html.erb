@@ -1,0 +1,118 @@
+<div class="col-lg-12">
+<div class="navbar navbar-default">
+         <div class="navbar-header">
+			 <a class="navbar-brand" href="#"></a>
+        </div>
+        <ul class="nav navbar-nav">
+  	<li role="presentation" class="active"><%= link_to 'HOME', home_path %></li>
+  	<li role="presentation"><%= link_to 'ABOUT', about_path %></li>
+  	<li role="presentation"><%= link_to 'BLOG', blog_path %></li>
+	<li role="presentation"><%= link_to 'CONTACT', contact_path %></li>
+	<li class="divider-vertical"></li>
+	</ul>
+	<form class="navbar-form navbar-right" role="search">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="I'm looking for...">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form> 
+	<ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Follow me! <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+			<%= link_to "http://www.facebook.com/marta.szatanke" do %>
+			  <%= image_tag "social-icons/1496597149_facebook.svg" %>
+			<% end %>
+
+			<%= link_to "http://www.twitter.com/MartaStanke" do %>
+			  <%= image_tag "social-icons/1496597158_twitter.svg" %>
+			<% end %>
+
+			<%= link_to "http://pl.pinterest.com/martastanke" do %>
+			  <%= image_tag "social-icons/1496597162_pinterest.svg" %>
+			<% end %>
+			  
+			<%= link_to "http://www.linkedin.com/in/martastanke/" do %>
+			  <%= image_tag "social-icons/1496597198_linkedin.svg" %>
+			<% end %>
+			  
+			<%= link_to "http://www.github.com/marstanke" do %>
+			  <%= image_tag "social-icons/1496596551_github.svg" %>
+			<% end %>
+          </ul>
+		</ul>
+	</div>
+	
+	
+        <div class="col-md-12">
+
+<!-- carousel -->
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+
+  <div class="carousel-inner">
+	  
+    <div class="item active">
+      <%=	image_tag 'DeathtoStock-Creative-Community6.jpg' %>
+	  <div class="carousel-caption">
+        <h3>HI, I'M MARTA</h3>
+        <p>A CREATIVE PROJECT MANAGER, CURRENTLY LIVING AND WORKING IN SINGAPORE</p>
+	  <%= link_to '<button class="btn btn-hero btn-lg" role="button">Get in touch</button>'.html_safe, contact_path %>
+	</div>
+	</div>
+	  
+    <div class="item">
+      <%= image_tag 'DeathtoStock-Creative-Community7.jpg' %>
+	  <div class="carousel-caption">
+        <h3>ABOUT ME</h3>
+        <p>FIERCE FEMINIST, PROUD INTROVERT, VOCAL ADVOCATE FOR LIFELONG LEARNING</p>
+		  <%= link_to '<button class="btn btn-hero btn-lg" role="button">Read more</button>'.html_safe, about_path %>
+      </div>
+		</div>
+	  
+    <div class="item">
+      <%= image_tag 'DeathtoStock_ModernWorkshop-02.jpg' %>
+	  <div class="carousel-caption">
+        <h3>MY BLOG</h3>
+        <p>SOMETIMES, I WRITE WORDS</p>
+		  <%= link_to '<button class="btn btn-hero btn-lg" role="button">Read more</button>'.html_safe, blog_path %>
+      </div>
+		 </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+	</div>
+</div>
+	 <div class="panel panel-default">
+  <div class="panel-body">
+  </div>
+<div class="panel-footer">
+	  
+	  <p>© <%= Date.today.year %> Marta Stanke</p>
+</div>
+</div>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+	$('.carousel').carousel({
+		interval: 3s
+	})
+</script>

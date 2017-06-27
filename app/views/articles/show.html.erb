@@ -1,0 +1,139 @@
+<div class="col-lg-12">
+<div class="navbar navbar-default">
+         <div class="navbar-header">
+			 <a class="navbar-brand" href="#"></a>
+        </div>
+        <ul class="nav navbar-nav">
+  	<li role="presentation"><%= link_to 'HOME', home_path %></li>
+  	<li role="presentation"><%= link_to 'ABOUT', about_path %></li>
+  	<li role="presentation" class="active"><%= link_to 'BLOG', blog_path %></li>
+	<li role="presentation"><%= link_to 'CONTACT', contact_path %></li>
+	<li class="divider-vertical"></li>
+	<li role="presentation"><%= link_to 'New Post', new_article_path %></li>
+	</ul>
+	<form class="navbar-form navbar-right" role="search">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="I'm looking for...">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form> 
+	<ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Follow me! <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+			<%= link_to "http://www.facebook.com/marta.szatanke" do %>
+			  <%= image_tag "social-icons/1496597149_facebook.svg" %>
+			<% end %>
+
+			<%= link_to "http://www.twitter.com/MartaStanke" do %>
+			  <%= image_tag "social-icons/1496597158_twitter.svg" %>
+			<% end %>
+
+			<%= link_to "http://pl.pinterest.com/martastanke" do %>
+			  <%= image_tag "social-icons/1496597162_pinterest.svg" %>
+			<% end %>
+			  
+			<%= link_to "http://www.linkedin.com/in/martastanke/" do %>
+			  <%= image_tag "social-icons/1496597198_linkedin.svg" %>
+			<% end %>
+			  
+			<%= link_to "http://www.github.com/marstanke" do %>
+			  <%= image_tag "social-icons/1496596551_github.svg" %>
+			<% end %>
+          </ul>
+		</ul>
+	</div>
+	
+   
+
+  	  <div class="container">	
+      <div class="row">
+          <div class="col-lg-8">
+
+                <!-- Blog Post -->
+
+                <!-- Title -->
+                <h1><%= @article.title %></h1>
+
+                <!-- Author -->
+                <p class="lead">
+                    by Marta
+                </p>
+
+                <hr>
+
+                <!-- Date/Time -->
+                <p><span class="glyphicon glyphicon-time"></span> Posted on <%= @article.created_at.strftime("%b %d, %Y, %H:%M") %> |<%= link_to ' Edit ', edit_article_path(@article) %> |<%= link_to ' Back ', blog_path %></p>
+
+                <hr>
+                <!-- Post Content -->
+                <p class="lead"><%= h truncate(@article.text, :length => 90) %></p>
+				<p class="article-text"><%= simple_format @article.text %></p>
+                <hr>
+
+                <!-- Blog Comments -->
+			  
+			  
+			  
+			  
+				<%= render @article.comments %>
+			  
+			  
+			  
+                <!-- Comments Form -->
+                <div class="well">
+                    <h2>Add a comment:</h2>
+					<%= render 'comments/form' %>
+                </div>
+
+                <hr>
+
+                <!-- Posted Comments -->
+				
+                <!-- Comment -->
+               
+					
+               </div>
+        
+		  <!-- Blog Sidebar Widgets Column -->
+            <div class="col-lg-4">
+
+                <!-- Blog Categories Well -->
+                <div class="well">
+                    <h4>Recent posts</h4>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <ul class="list-unstyled">
+							<li>#</li>
+							<li>#</li>
+							<li>#</li>
+							</ul>
+                        </div>
+                       
+                    </div>
+                    <!-- /.row -->
+                </div>
+
+                <!-- Side Widget Well -->
+                <div class="well">
+                    <h4>Side Widget Well</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+                </div>
+
+            </div>
+      </div>
+      </div>
+
+
+<div class="panel panel-default">
+<div class="panel-footer">
+	  
+	  <p>© <%= Date.today.year %> Marta Stanke</p>
+</div>
+</div>
+
+	
+</div>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

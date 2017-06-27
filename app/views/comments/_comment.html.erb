@@ -1,0 +1,13 @@
+<div class="media">
+	<div class="media-body">
+		<blockquote>
+		<h4 class="media-heading"><%= comment.commenter %>
+		<small><%= comment.body %></small></h4>
+		<p>
+  			<%= link_to 'Delete', [comment.article, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+		</p>
+		</blockquote>
+	</div>
+</div>

@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This ruby blog/ personal website was created by a total beginner as an entry application for TechLadies Bootcamp (3rd edition, 2017). 
 
-Things you may want to cover:
+See online: https://marta-stanke-website.herokuapp.com/home
 
-* Ruby version
+* Ruby version: ruby 2.4.1p111
 
-* System dependencies
+* Database: postgresql
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

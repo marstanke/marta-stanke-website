@@ -21,9 +21,6 @@ gem 'simple_form'
 #pagination
 gem 'kaminari'
 
-#sqlite3
-gem 'sqlite3'
-
 #db
 gem 'pg'
 
@@ -31,9 +28,6 @@ group :production do
 	gem 'pg'
 end
 
-group :development, :test do
-	gem 'sqlite3'
-end
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets

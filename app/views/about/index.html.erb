@@ -1,4 +1,10 @@
 <div class="col-lg-12">
+	<div class="header">
+		<div class="logo"><%= image_tag "cat-logo.svg"%></div>
+	</div>
+</div>
+
+<div class="col-lg-12">
 <div class="navbar navbar-default">
          <div class="navbar-header">
 			 <a class="navbar-brand" href="#"></a>
@@ -10,133 +16,53 @@
 	<li role="presentation"><%= link_to 'CONTACT', contact_path %></li>
 	<li class="divider-vertical"></li>
 	</ul>
-	<form class="navbar-form navbar-right" role="search">
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="I'm looking for...">
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form> 
 	<ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Follow me! <span class="caret"></span></a>
           <ul class="dropdown-menu">
 			<%= link_to "http://www.facebook.com/marta.szatanke" do %>
-			  <%= image_tag "social-icons/1496597149_facebook.svg" %>
-			<% end %>
+            <%= image_tag "social-icons/1498920409_facebook.svg" %>
+            <% end %>
 
-			<%= link_to "http://www.twitter.com/MartaStanke" do %>
-			  <%= image_tag "social-icons/1496597158_twitter.svg" %>
-			<% end %>
+            <%= link_to "http://www.twitter.com/MartaStanke" do %>
+            <%= image_tag "social-icons/1498920466_twitter.svg" %>
+            <% end %>
 
-			<%= link_to "http://pl.pinterest.com/martastanke" do %>
-			  <%= image_tag "social-icons/1496597162_pinterest.svg" %>
-			<% end %>
-			  
-			<%= link_to "http://www.linkedin.com/in/martastanke/" do %>
-			  <%= image_tag "social-icons/1496597198_linkedin.svg" %>
-			<% end %>
-			  
-			<%= link_to "http://www.github.com/marstanke" do %>
-			  <%= image_tag "social-icons/1496596551_github.svg" %>
+            <%= link_to "http://pl.pinterest.com/martastanke" do %>
+            <%= image_tag "social-icons/1498920405_pinterest.svg" %>
+            <% end %>
+
+            <%= link_to "http://www.linkedin.com/in/martastanke/" do %>
+            <%= image_tag "social-icons/1498920411_linkedin.svg" %>
+            <% end %>
+              
+            <%= link_to "http://www.github.com/marstanke" do %>
+            <%= image_tag "social-icons/1498920397_github.svg" %>
 			<% end %>
           </ul>
 		</ul>
 	</div>
 	
-<script src="https://use.typekit.net/bkt6ydm.js"></script>
-<script>try{Typekit.load({ async: true });}catch(e){}</script>
-
 <div class="container-fluid">
     
     <div class="row example-centered">
         <div class="col-md-12 example-title">
             <h2>About me</h2>
-            <p>Proud introvert, fierce feminist, vocal advocate for lifelong learning; never says 'no' to a new challenge and improves communication processes for a living.</p>
+            <p>In addition to developing a fail-proof sales communication platform at Cisco, I volunteer at <a href="https://www.facebook.com/shesaysSG/">SheSaysSG</a> and study the fundamentals of coding. I never say 'no' to a new challenge and improve communication processes for a living.</p>
         </div>
+        <!-- timeline -->
+        
         <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
             <ul class="timeline timeline-centered">
-                
-				<li class="timeline-item">
-                    <div class="timeline-info">
-                        <span>March 12, 2016</span>
-                    </div>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Where do I want to be in 5 years?</h3>
-                        <p>I hope to spend the next few years transitioning from a young professional to a full-grown leader and a champion for young women everywhere. I'm also hoping I will have built my first robot by then.</p>
-                    </div>
-                </li>
-				 <li class="timeline-item period">
-                    <div class="timeline-info"></div>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h2 class="timeline-title">Singapore</h2>
-                    </div>
-                </li>
-				<li class="timeline-item">
-                    <div class="timeline-info">
-                        <span>March 12, 2016</span>
-                    </div>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">What do I like about TechLadies?</h3>
-                        <p><i>Educate one girl and she can educate ten more</i>. The fact that there's an entire group of wonderful boss ladies offering kindness and knowledge to others is extremely motivating. Sisterhood is one of the most empowering things out there.</p>
-                    </div>
-                </li>
-				<li class="timeline-item">
-                    <div class="timeline-info">
-                        <span>March 12, 2016</span>
-                    </div>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">One degree north</h3>
-                        <p>In addition to developing a fail-proof sales communication platform at Cisco, I volunteer at <a href="https://www.facebook.com/shesaysSG/">SheSaysSG</a> and study the fundamentals of coding. You can often spot me in CSHH or at one of the tech meetups in town.</p>
-                    </div>
-                </li>
-				 <li class="timeline-item period">
-                    <div class="timeline-info"></div>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h2 class="timeline-title">UK</h2>
-                    </div>
-                </li>
-				<li class="timeline-item">
-                    <div class="timeline-info">
-                        <span>March 12, 2016</span>
-                    </div>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">doggo</h3>
-                       	<%= image_tag "Ruu.jpg" %>
-                    </div>
-                </li>
-                <li class="timeline-item">
-                    <div class="timeline-info">
-                        <span>March 23, 2016</span>
-                    </div>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">London calling</h3>
-                        <p>I proceeded to work in marketing and sales communications for two publishing companies, Oxford University Press and DK and eventually moved to Singapore from London in 2016.</p>
-                    </div>
-                </li>
-                <li class="timeline-item period">
+                <!-- POLAND -->
+                 <li class="timeline-item period">
                     <div class="timeline-info"></div>
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h2 class="timeline-title">Poland</h2>
                     </div>
                 </li>
-                <li class="timeline-item">
-                    <div class="timeline-info">
-                        <span>2013</span>
-                    </div>
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Literature major</h3>
-                        <p>After graduating from University of Warsaw with an MA in English Language and Culture I decided to pursue a career in Project Management and put my structured thinking to good use.</p>
-                    </div>
-                </li>
+                
                 <li class="timeline-item">
                     <div class="timeline-info">
                         <span>1989</span>
@@ -147,8 +73,97 @@
                         <p>I was born in the beautiful city of Gdansk, Poland, in 1989.</p>
                     </div>
                 </li>
+                <li class="timeline-item">
+                    <div class="timeline-info">
+                        <span>2013</span>
+                    </div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Literature major</h3>
+                        <p>After graduating from University of Warsaw with an MA in English Language and Culture I decided to pursue a career in Project Management and Marketing at Oxford University Press.</p>
+                    </div>
+                </li>
+                
+                <!-- UK -->
+                 <li class="timeline-item period">
+                    <div class="timeline-info"></div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h2 class="timeline-title">UK</h2>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-info">
+                        <span>September, 2015</span>
+                    </div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">London calling</h3>
+                        <p>In 2015 I joined my boyfriend in London and stared a new job in a famous publishing company, DK. The biggest perk: free books!</p>
+                    </div>
+                </li>
+				<li class="timeline-item">
+                    <div class="timeline-info">
+                        <span>June, 2016</span>
+                    </div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Bye bye, Europe!</h3>
+                        <p>In June 2016 we made the life-changing decision to move to Asia. It was super tough but in the long run it was the right choice! </p>
+                    </div>
+                </li>
+                <!-- Singapore -->
+                <li class="timeline-item period">
+                    <div class="timeline-info"></div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h2 class="timeline-title">Singapore</h2>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-info">
+                        <span>June, 2016</span>
+                    </div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">One Degree North</h3>
+                        <p>With no contacts and very few hard skills, I had to leverage whatever I could to find a place for myself in Singapore. What I lacked in coding talent and marketing chops at the time, I significantly made up for in determination, optimism,
+                        and people skills that would help me build the meaningful connections I needed and land a new job. </p>
+                    </div>
+                </li>
+				<li class="timeline-item">
+                    <div class="timeline-info">
+                        <span>September, 2016</span>
+                    </div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Women's Networks FTW</h3>
+                        <p>After three stressful months of sending out resumes, I finally found a supportive network of professional women, <a href="https://www.facebook.com/shesaysSG/">SheSaysSG</a>, and with their help I got an interview for a job I actually wanted - a project manager at a technology company!</p>
+                    </div>
+                </li>
+				<li class="timeline-item">
+                    <div class="timeline-info">
+                        <span>June, 2017</span>
+                    </div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">What do I like about TechLadies?</h3>
+                        <p><i>Educate one girl and she can educate ten more</i>. The fact that there's an entire group of wonderful boss ladies offering kindness and knowledge to others is extremely motivating. Sisterhood is one of the most empowering things out there.</p>
+                    </div>
+                </li>
+                <li class="timeline-item">
+                    <div class="timeline-info">
+                        <span>2022</span>
+                    </div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Where do I want to be in 5 years?</h3>
+                        <p>I hope to spend the next few years transitioning from a young professional to a full-grown leader and a champion for young women everywhere. I'm also hoping I will have built my first robot by then.</p>
+                    </div>
+                </li>
             </ul>
         </div>
+        
     </div>
 </div>
      <div class="container">	
@@ -171,15 +186,15 @@
 	   <div class="col-lg-4">
 	   <div class="well">
                     <h2>About This Website</h2>
-			<p>Image credits: <a href="http://deathtothestockphoto.com/">Death to the Stock Photo</a></p>
-			<p>Social media icons: <a href="https://www.iconfinder.com/Adi_Sinchetru">Adi Sînchetru</a></p>
+			<p>Image credits: <a href="http://deathtothestockphoto.com/">Death to the Stock Photo</a>, private collection, and the Internetz</p>
+			<p>Social media icons: <a href="https://www.iconfinder.com/WillE">Axialis S.A.</a></p>
 			<p>Rails Blog tutorial: <a href="http://guides.rubyonrails.org/getting_started.html">Ruby on Rails Guides (v5.1.1)</a></p>
 			<p>Blog layout template: <a href="https://github.com/BlackrockDigital/startbootstrap-blog-post">Start Bootstrap</a></p>
 			<p>Bootstrap carousel tutorial: <a href="https://www.w3schools.com/bootstrap/bootstrap_carousel.asp">W3Schools</a> and <a href="https://codepen.io/jmalatia/pen/Wrvjwp">Jason Malatia</a> </p>
 		   	<p>Simple responsive timeline: <a href="https://codepen.io/phasethree/pen/NNOvrW">Brady Wright</a></p>
-			<p>Email form tutorial: <a href="#"></a></p>
 			<p>Navigation tabs and footer panel: <a href="http://getbootstrap.com/components/">GetBootstrap</a></p>
 			<p>Bootstrap 3 responsive grid: <a href="https://www.bootply.com/94398">Found on stack overflow</a></p>
+		   	<p>Information Card: <a href="https://bootsnipp.com/snippets/featured/information-card">mouse0270</a></p>
 		   </div>
                 </div>
 
@@ -194,6 +209,8 @@
 </div>
 	
 </div>
-	
+
+<script src="https://use.typekit.net/bkt6ydm.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

@@ -1,4 +1,10 @@
 <div class="col-lg-12">
+	<div class="header">
+		<div class="logo"><%= image_tag "cat-logo.svg"%></div>
+	</div>
+</div>
+
+<div class="col-lg-12">
 <div class="navbar navbar-default">
          <div class="navbar-header">
 			 <a class="navbar-brand" href="#"></a>
@@ -8,36 +14,30 @@
   	<li role="presentation"><%= link_to 'ABOUT', about_path %></li>
   	<li role="presentation"><%= link_to 'BLOG', blog_path %></li>
 	<li role="presentation" class="active"><%= link_to 'CONTACT', contact_path %></li>
-	<li class="divider-vertical"></li>
+	<a href="<%= messages_path %>"><button type="button" class="btn btn-default navbar-btn">Read Messages</button></a>
 	</ul>
-	<form class="navbar-form navbar-right" role="search">
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="I'm looking for...">
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form> 
 	<ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Follow me! <span class="caret"></span></a>
           <ul class="dropdown-menu">
 			<%= link_to "http://www.facebook.com/marta.szatanke" do %>
-			  <%= image_tag "social-icons/1496597149_facebook.svg" %>
-			<% end %>
+            <%= image_tag "social-icons/1498920409_facebook.svg" %>
+            <% end %>
 
-			<%= link_to "http://www.twitter.com/MartaStanke" do %>
-			  <%= image_tag "social-icons/1496597158_twitter.svg" %>
-			<% end %>
+            <%= link_to "http://www.twitter.com/MartaStanke" do %>
+            <%= image_tag "social-icons/1498920466_twitter.svg" %>
+            <% end %>
 
-			<%= link_to "http://pl.pinterest.com/martastanke" do %>
-			  <%= image_tag "social-icons/1496597162_pinterest.svg" %>
-			<% end %>
-			  
-			<%= link_to "http://www.linkedin.com/in/martastanke/" do %>
-			  <%= image_tag "social-icons/1496597198_linkedin.svg" %>
-			<% end %>
-			  
-			<%= link_to "http://www.github.com/marstanke" do %>
-			  <%= image_tag "social-icons/1496596551_github.svg" %>
+            <%= link_to "http://pl.pinterest.com/martastanke" do %>
+            <%= image_tag "social-icons/1498920405_pinterest.svg" %>
+            <% end %>
+
+            <%= link_to "http://www.linkedin.com/in/martastanke/" do %>
+            <%= image_tag "social-icons/1498920411_linkedin.svg" %>
+            <% end %>
+              
+            <%= link_to "http://www.github.com/marstanke" do %>
+            <%= image_tag "social-icons/1498920397_github.svg" %>
 			<% end %>
           </ul>
 		</ul>
@@ -50,64 +50,39 @@
 <div class="col-lg-12">
 	<div class="container">	
       <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-8 form-line">
 			<div class="category recent-posts">
-			<h1>Email me!</h1>
-
+			<h1>Leave me a message!</h1>
+                <div class="row">
+            <div class="col-md-12">
+                <p class="text-muted"><strong>*</strong> Please include your email address if you want me to respond. </p>
+            </div>
+                </div>
                 <hr>
+                
+                <div class="new-message">
+                    <%= form_for :message, url: messages_path do |f| %>
 
-			<form id="contact-form" method="post" action="contact.php" role="form">
-			<div class="messages"></div>
-			<div class="controls">
 
-    		<div class="row">
-    		<div class="col-md-8">
-        	<div class="form-group">
-            	<label for="form_name">Name *</label>
-                <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
-             <div class="help-block with-errors"></div>
-             </div>
-			</div>
-      </div>
-      <div class="row">
-            <div class="col-md-8">
-                <div class="form-group">
-                    <label for="form_email">Email *</label>
-                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
-                    <div class="help-block with-errors"></div>
+                    <div class="col-lg-12">
+                        <p>
+                        <%= f.label :"email address" %><br>
+                        <%= f.text_field :title, size: "100%" %>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <p>
+                        <%= f.label :message %><br>
+                        <%= f.text_area :text, size: "100%x10%" %>
+                      </p>
+                    </div>
+
+                    <%= f.submit 'Send message', :class => 'btn btn-default submit' %>
+                    <% end %>
+ 		
                 </div>
-            </div>
-       </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label for="form_message">Message *</label>
-                    <textarea id="form_message" name="message" class="form-control" placeholder="Leave a message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
-                    <div class="help-block with-errors"></div>
-                </div>
-            </div>
-		<div class="row">
-		<div class="col-md-12">
-		<label for="human" class="col-sm-4 control-label">I am not a robot</label>
-		<div class="col-sm-8">
-			<input type="text" class="form-control" id="human" name="human" placeholder="2 + 3 = ?">
-		</div>
-	</div>
-			</div>
-			<div class="row">
-            <div class="col-md-12">
-                <input type="submit" class="btn btn-success btn-send btn-sm" value="Send message">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p class="text-muted"><strong>*</strong> These fields are required.</p>
-            </div>
-        </div>
-    </div>
-		</div>
 
-</form>
 		  </div>
 		  </div>
         <div class="col-lg-4">
@@ -134,7 +109,9 @@
 	  <p>© <%= Date.today.year %> Marta Stanke</p>
 </div>
 </div>
-	
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <div id="fb-root"></div>

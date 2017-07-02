@@ -1,4 +1,10 @@
 <div class="col-lg-12">
+	<div class="header">
+		<div class="logo"><%= image_tag "cat-logo.svg"%></div>
+	</div>
+</div>
+
+<div class="col-lg-12">
 <div class="navbar navbar-default">
          <div class="navbar-header">
 			 <a class="navbar-brand" href="#"></a>
@@ -10,131 +16,59 @@
 	<li role="presentation"><%= link_to 'CONTACT', contact_path %></li>
 	<li class="divider-vertical"></li>
 	</ul>
-	<form class="navbar-form navbar-right" role="search">
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="I'm looking for...">
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form> 
-	<ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Follow me! <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-			<%= link_to "http://www.facebook.com/marta.szatanke" do %>
-			  <%= image_tag "social-icons/1496597149_facebook.svg" %>
-			<% end %>
-
-			<%= link_to "http://www.twitter.com/MartaStanke" do %>
-			  <%= image_tag "social-icons/1496597158_twitter.svg" %>
-			<% end %>
-
-			<%= link_to "http://pl.pinterest.com/martastanke" do %>
-			  <%= image_tag "social-icons/1496597162_pinterest.svg" %>
-			<% end %>
-			  
-			<%= link_to "http://www.linkedin.com/in/martastanke/" do %>
-			  <%= image_tag "social-icons/1496597198_linkedin.svg" %>
-			<% end %>
-			  
-			<%= link_to "http://www.github.com/marstanke" do %>
-			  <%= image_tag "social-icons/1496596551_github.svg" %>
-			<% end %>
-          </ul>
-		</ul>
 	</div>
 	
 
-        <div class="col-md-12">
-        	<p class="lead">The Bootstrap 3 grid is fluid only. This example shows how to use a custom container to create a wide layout.</p>
-        </div>
-    <hr>
-
   	  <div class="container">	
       <div class="row">
-        <div class="col-lg-8">
-	</div>
-	
-
-
-  	  <div class="container">	
-      <div class="row">
-        <div class="col-lg-8">
-          <h3>Recent Posts</h3>
-			<div class="category recent-posts">
-				
-                    <h4>Blog Categories</h4>
-         
-<ul>
-			<% @articles.each do |article| %>
-				
-	<li>	<%= article.title %></li>
-			<%= link_to 'Show', article_path(article) %>
-			<%= link_to 'Edit', edit_article_path(article) %>
-			<%= link_to 'Destroy', article_path(article),
-              method: :delete,
-data: { confirm: 'Are you sure?' } %>
-			<% end %>
-				</ul>
+        <div class="col-lg-12">
+            <h3>This is a test site where I explore new layout ideas</h3>
+            
+            <ul class="ch-grid">
+	<li>
+	<div class="ch-item">				
+		<div class="ch-info">
+			<div class="ch-info-front ch-img-1"></div>
+			<div class="ch-info-back">
+				<h3>Poland</h3>
+				<p> <a href="http://drbl.in/eAoj">View gallery</a></p>
+			</div>	
 		</div>
-		  </div>
-        
-		  <div class="col-lg-4">
-			<!-- Blog Search Well -->
-                <div class="well">
-                    <h4>Blog Search</h4>
-                    <div class="input-group">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
-                    </div>
-                    <!-- /.input-group -->
-                </div>
-            <!-- Blog Categories Well -->
-                <div class="well">
-                    <h4>Blog Categories</h4>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- /.row -->
-                </div>
-
-          <!-- Side Widget Well -->
-                <div class="well">
-                    <h4>Side Widget Well</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
-                </div>
-        </div>
+	</div>
+</li>
+	<li>
+	<div class="ch-item">				
+		<div class="ch-info">
+			<div class="ch-info-front ch-img-2"></div>
+			<div class="ch-info-back">
+				<h3>Food</h3>
+				<p> <a href="http://drbl.in/eAoj">View gallery</a></p>
+			</div>	
+		</div>
+	</div>
+</li>
+	<li>
+	<div class="ch-item">				
+		<div class="ch-info">
+			<div class="ch-info-front ch-img-3"></div>
+			<div class="ch-info-back">
+				<h3>Hong Kong</h3>
+				<p> <a href="http://drbl.in/eAoj">View gallery</a></p>
+			</div>	
+		</div>
+	</div>
+</li>
+</ul>
+            
+            <h3>Circular Images, Equal Height and Width</h3>  
+<ul class="list-inline gallery">   
+<li><img class="img-circle zoom" src="http://lorempixel.com/110/110/abstract/2"></li>    
+<li><img class="img-circle zoom" src="http://lorempixel.com/110/110/abstract/3"></li>    
+<li><img class="img-circle zoom" src="http://lorempixel.com/110/110/abstract/4"></li>  
+</ul>
       </div>
-      </div>
-	
-  
-  	  <hr>
+          </div>
+    
 	
 <div class="panel panel-default">
 <div class="panel-footer">
@@ -143,7 +77,7 @@ data: { confirm: 'Are you sure?' } %>
 </div>
 </div>
 
-	
+    </div>	
 </div>
 	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

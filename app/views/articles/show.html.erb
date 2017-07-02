@@ -1,51 +1,27 @@
 <div class="col-lg-12">
+	<div class="header">
+		<div class="logo"><%= image_tag "cat-logo.svg"%></div>
+	</div>
+</div>
+
+<div class="col-lg-12">
 <div class="navbar navbar-default">
+    <div class="container-fluid">
          <div class="navbar-header">
 			 <a class="navbar-brand" href="#"></a>
         </div>
+         <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-  	<li role="presentation"><%= link_to 'HOME', home_path %></li>
-  	<li role="presentation"><%= link_to 'ABOUT', about_path %></li>
-  	<li role="presentation" class="active"><%= link_to 'BLOG', blog_path %></li>
-	<li role="presentation"><%= link_to 'CONTACT', contact_path %></li>
-	<li class="divider-vertical"></li>
-	<li role="presentation"><%= link_to 'New Post', new_article_path %></li>
+  	<li><%= link_to 'HOME', home_path %></li>
+  	<li><%= link_to 'ABOUT', about_path %></li>
+  	<li class="active"><%= link_to 'BLOG', blog_path %></li>
+	<li><%= link_to 'CONTACT', contact_path %></li>
+	<a href="<%= new_article_path %>"><button type="button" class="btn btn-default navbar-btn">New Article</button></a>
 	</ul>
-	<form class="navbar-form navbar-right" role="search">
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="I'm looking for...">
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form> 
-	<ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Follow me! <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-			<%= link_to "http://www.facebook.com/marta.szatanke" do %>
-			  <%= image_tag "social-icons/1496597149_facebook.svg" %>
-			<% end %>
-
-			<%= link_to "http://www.twitter.com/MartaStanke" do %>
-			  <%= image_tag "social-icons/1496597158_twitter.svg" %>
-			<% end %>
-
-			<%= link_to "http://pl.pinterest.com/martastanke" do %>
-			  <%= image_tag "social-icons/1496597162_pinterest.svg" %>
-			<% end %>
-			  
-			<%= link_to "http://www.linkedin.com/in/martastanke/" do %>
-			  <%= image_tag "social-icons/1496597198_linkedin.svg" %>
-			<% end %>
-			  
-			<%= link_to "http://www.github.com/marstanke" do %>
-			  <%= image_tag "social-icons/1496596551_github.svg" %>
-			<% end %>
-          </ul>
-		</ul>
 	</div>
-	
-   
-
+    </div>
+    </div>
   	  <div class="container">	
       <div class="row">
           <div class="col-lg-8">
@@ -67,18 +43,13 @@
 
                 <hr>
                 <!-- Post Content -->
-                <p class="lead"><%= h truncate(@article.text, :length => 90) %></p>
+                <p class="lead"></p>
 				<p class="article-text"><%= simple_format @article.text %></p>
                 <hr>
 
                 <!-- Blog Comments -->
 			  
-			  
-			  
-			  
 				<%= render @article.comments %>
-			  
-			  
 			  
                 <!-- Comments Form -->
                 <div class="well">
@@ -91,33 +62,62 @@
                 <!-- Posted Comments -->
 				
                 <!-- Comment -->
-               
 					
                </div>
         
 		  <!-- Blog Sidebar Widgets Column -->
             <div class="col-lg-4">
+                 <div class="well">
+			<div class="[ info-card ]">
+					<%= image_tag "profile-pic.jpg", :style => "width: 100%" %>
+					<div class="[ info-card-details ] animate">
+						<div class="[ info-card-header ]">
+							<h1> About the Blog </h1>
+							<h3> and social links </h3>
+						</div>
+						<div class="[ info-card-detail ]">
+							<!-- Description -->
+							<p>Blog posts courtesy of WikiProject Women Scientists, a WikiProject dedicated to ensuring quality and coverage of biographies of women scientists. Women's contributions in areas such as science are severely underrepresented in Wikipedia's pages. Let's change that!</p>
+								<div class="social">
+								<%= link_to "http://www.facebook.com/marta.szatanke" do %>
+								  <%= image_tag "social-icons/1498920409_facebook.svg" %>
+								<% end %>
 
+								<%= link_to "http://www.twitter.com/MartaStanke" do %>
+								  <%= image_tag "social-icons/1498920466_twitter.svg" %>
+								<% end %>
+
+								<%= link_to "http://pl.pinterest.com/martastanke" do %>
+								  <%= image_tag "social-icons/1498920405_pinterest.svg" %>
+								<% end %>
+
+								<%= link_to "http://www.linkedin.com/in/martastanke/" do %>
+								  <%= image_tag "social-icons/1498920411_linkedin.svg" %>
+								<% end %>
+
+								<%= link_to "http://www.github.com/marstanke" do %>
+								  <%= image_tag "social-icons/1498920397_github.svg" %>
+								<% end %>
+          						</div>
+						</div>
+					</div>
+				</div>
+                </div>
                 <!-- Blog Categories Well -->
                 <div class="well">
                     <h4>Recent posts</h4>
                     <div class="row">
                         <div class="col-lg-12">
-                            <ul class="list-unstyled">
-							<li>#</li>
-							<li>#</li>
-							<li>#</li>
+                            <ul class="list-unstyled"> 
+							 <% @articles.first(3).each do |article| %>
+							<li><h5><%= article.title %> <small>| <%= article.created_at.strftime("%b %d, %Y") %>  |</small>
+								<%= link_to 'Show', article_path(article) %></h5></li>
+							<% end %>
 							</ul>
                         </div>
                        
                     </div>
                     <!-- /.row -->
-                </div>
-
-                <!-- Side Widget Well -->
-                <div class="well">
-                    <h4>Side Widget Well</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
                 </div>
 
             </div>

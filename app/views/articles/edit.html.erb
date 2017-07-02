@@ -1,4 +1,10 @@
 <div class="col-lg-12">
+	<div class="header">
+		<div class="logo"><%= image_tag "cat-logo.svg"%></div>
+	</div>
+</div>
+
+<div class="col-lg-12">
 <div class="navbar navbar-default">
          <div class="navbar-header">
 			 <a class="navbar-brand" href="#"></a>
@@ -9,45 +15,12 @@
   	<li role="presentation" class="active"><%= link_to 'BLOG', blog_path %></li>
 	<li role="presentation"><%= link_to 'CONTACT', contact_path %></li>
 	<li class="divider-vertical"></li>
-	</ul>
 	<form class="navbar-form navbar-right" role="search">
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="I'm looking for...">
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form> 
-	<ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Follow me! <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-			<%= link_to "http://www.facebook.com/marta.szatanke" do %>
-			  <%= image_tag "social-icons/1496597149_facebook.svg" %>
-			<% end %>
-
-			<%= link_to "http://www.twitter.com/MartaStanke" do %>
-			  <%= image_tag "social-icons/1496597158_twitter.svg" %>
-			<% end %>
-
-			<%= link_to "http://pl.pinterest.com/martastanke" do %>
-			  <%= image_tag "social-icons/1496597162_pinterest.svg" %>
-			<% end %>
-			  
-			<%= link_to "http://www.linkedin.com/in/martastanke/" do %>
-			  <%= image_tag "social-icons/1496597198_linkedin.svg" %>
-			<% end %>
-			  
-			<%= link_to "http://www.github.com/marstanke" do %>
-			  <%= image_tag "social-icons/1496596551_github.svg" %>
-			<% end %>
-          </ul>
-		</ul>
+			<button type="submit" class="btn btn-default"><%= link_to 'New Post', new_article_path %></button>
+			</form>
+	</ul>
 	</div>
 	
-	
-        <div class="col-md-12">
-        	<p class="lead">The Bootstrap 3 grid is fluid only. This example shows how to use a custom container to create a wide layout.</p>
-        </div>
-    <hr>
 
   	  <div class="container">	
       <div class="row">
@@ -81,14 +54,11 @@
     <%= f.text_area :text, size: "100%x10%" %>
   </p>
  
-  <p>
-    <%= f.submit %>
-  </p>
- 
-<% end %>
- 
-<%= link_to 'Back', blog_path %>
-			
+  <p>   
+    <%= f.submit 'Update article', :class => 'btn btn-primary'%>
+    <a href="<%= blog_path %>"><button type="button" class="btn btn-primary">Back</button></a>
+    <% end %>
+  </p>			
 		  </div>
 		  </div>
 	</div>

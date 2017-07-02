@@ -1,0 +1,83 @@
+<div class="col-lg-12">
+	<div class="header">
+		<div class="logo"><%= image_tag "cat-logo.svg"%></div>
+	</div>
+</div>
+
+<div class="col-lg-12">
+<div class="navbar navbar-default">
+         <div class="navbar-header">
+			 <a class="navbar-brand" href="#"></a>
+        </div>
+        <ul class="nav navbar-nav">
+  	<li role="presentation"><%= link_to 'HOME', home_path %></li>
+  	<li role="presentation"><%= link_to 'ABOUT', about_path %></li>
+  	<li role="presentation"><%= link_to 'BLOG', blog_path %></li>
+	<li role="presentation" class="active"><%= link_to 'CONTACT', contact_path %></li>
+	<li class="divider-vertical"></li>
+	</ul>
+	<ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Follow me! <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+			<%= link_to "http://www.facebook.com/marta.szatanke" do %>
+            <%= image_tag "social-icons/1498920409_facebook.svg" %>
+            <% end %>
+
+            <%= link_to "http://www.twitter.com/MartaStanke" do %>
+            <%= image_tag "social-icons/1498920466_twitter.svg" %>
+            <% end %>
+
+            <%= link_to "http://pl.pinterest.com/martastanke" do %>
+            <%= image_tag "social-icons/1498920405_pinterest.svg" %>
+            <% end %>
+
+            <%= link_to "http://www.linkedin.com/in/martastanke/" do %>
+            <%= image_tag "social-icons/1498920411_linkedin.svg" %>
+            <% end %>
+              
+            <%= link_to "http://www.github.com/marstanke" do %>
+            <%= image_tag "social-icons/1498920397_github.svg" %>
+			<% end %>
+          </ul>
+		</ul>
+	</div>
+	
+	<div class="col-md-12">
+        	</div>
+    <hr>
+
+<div class="col-lg-12">
+	<div class="container">	
+      <div class="row">
+        <div class="col-lg-8">
+			<div class="category recent-posts">
+
+<h1>Messages from fans</h1>
+ 
+<ul class="messages">
+    <% @messages.each do |message| %>
+   
+    <h4><small>Sent: <%= message.created_at.strftime("%b %d, %Y, %H:%M") %> <%= link_to 'Destroy', message_path(message),
+              			method: :delete,
+						data: { confirm: 'Are you sure?' } %></small></h4>
+	<h4 class="media-heading">Author: <%= message.title %></h4>
+    <p>Message: <%= message.text %></p>
+    <% end %>
+</ul>
+            </div>
+          </div>
+        </div>
+    </div>
+                
+<div class="panel panel-default">
+<div class="panel-footer">
+	  
+	  <p>© <%= Date.today.year %> Marta Stanke</p>
+</div>
+</div>
+</div>
+</div>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

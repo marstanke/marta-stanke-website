@@ -20,6 +20,9 @@ test:
   <<: *default
   database: db/test.sqlite3
 
-production:
+local_postgres:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: techladiesapplication
+  user: techladiesapp
+  password: test
